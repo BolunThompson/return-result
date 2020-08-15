@@ -21,8 +21,12 @@ def return_result(func: T) -> T:
     """
     try:
         source = inspect.getsource(func)
-    except OSError as e:
-        raise ValueError(f"Cannot get the source code of {func}") from e
+    except OSError:
+        text = (
+            f"Cannot get the source code of {func}."
+            "If this was called in a REPL, that is the problem."
+        )
+        raise ValueError(text) from None
     file = inspect.getfile(func)
 
     source_module_ast = ast.parse(source)
