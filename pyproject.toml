@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "return-result"
-version = "1.0.0"
+version = "1.0.1"
 description = "This defines a decorator that causes the 'result' variable to be returned when there is no explicit return"
 authors = ["Bolun Thompson <abolunthompson@gmail.com>"]
 readme = "README.md"
