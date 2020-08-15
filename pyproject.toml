@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "return-result"
+version = "1.0.0"
+description = "This defines a decorator that causes the 'result' variable to be returned when there is no explicit return"
+authors = ["Bolun Thompson <abolunthompson@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/bolunthompson/return-result"
+keywords = ["return result", "result variable", "nim result"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "Typing :: Typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
