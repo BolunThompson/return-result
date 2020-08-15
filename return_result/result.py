@@ -23,6 +23,11 @@ def return_result(func: T) -> T:
         source = inspect.getsource(func)
     except OSError as e:
         raise ValueError(f"Cannot get the source code of {func}") from e
+    first_line = source.splitlines()[0]
+    indent_level = len(first_line) - len(
+        first_line.lstrip("\t" if source[0] == "\t" else " ")
+    )
+    source = "".join(line[indent_level:] for line in source.splitlines(keepends=True))
     file = inspect.getfile(func)
 
     source_module_ast = ast.parse(source)

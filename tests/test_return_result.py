@@ -19,7 +19,9 @@ def func_test_no_result():
 
 
 class Test:
+    @return_result
     def func_test_methods(self):
+        self  # To make sure self is accesible
         result = "works"
 
 
