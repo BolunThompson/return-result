@@ -4,11 +4,15 @@
 
 # return-result
 
+I am not maintaining this; it my not work or have bugs on the latest version of python.
+
 This defines a decorator that causes the variable `result` to be automatically returned from a function when there is no return statement. 
 
 This works by getting the source code of the decorated function, so this won't work in the CPython REPL. It does work in IPython however.
 
 Inspired by the [Nim feature](https://nim-by-example.github.io/variables/result/) that does the same thing.
+
+
 # Example
 
 ```python
