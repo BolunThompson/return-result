@@ -4,7 +4,7 @@
 
 # return-result
 
-I am not maintaining this; it my not work or have bugs on the latest version of python.
+*I am not maintaining this; it likely will not work and has bugs.*
 
 This defines a decorator that causes the variable `result` to be automatically returned from a function when there is no return statement. 
 
